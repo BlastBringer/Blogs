@@ -42,10 +42,14 @@ body {
   color: white;
 }
 
-
-
 .palkia {
-  position : absolute;
-  top: 30px;
-  left: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.palkia img {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
 }
