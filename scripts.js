@@ -1,16 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const leftPillar = document.querySelector('.pillar.left');
-    const rightPillar = document.querySelector('.pillar.right');
-  
-    function createSpiral() {
-      const spiral = document.createElement('div');
-      spiral.classList.add('spiral');
-      return spiral;
-    }
-  
-    for (let i = 0; i < 10; i++) {
-      leftPillar.appendChild(createSpiral());
-      rightPillar.appendChild(createSpiral());
-    }
-  });
-  
+// Number of stars to generate
+const numberOfStars = 500;
+
+// Function to create a star element
+function createStar() {
+    const star = document.createElement('div');
+    star.classList.add('star');
+
+    // Random position within the viewport
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+
+    star.style.left = `${x}px`;
+    star.style.top = `${y}px`;
+
+    return star;
+}
+
+// Add stars to the body
+for (let i = 0; i < numberOfStars; i++) {
+    document.body.appendChild(createStar());
+}
