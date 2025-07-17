@@ -1,5 +1,5 @@
 // Number of stars to generate
-const numberOfStars = 500;
+const numberOfStars = 600;
 
 // Function to create a star element
 function createStar() {
